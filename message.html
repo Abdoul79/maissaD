@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lettre d'amour</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #fdf6f0;
+      color: #333;
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 2px solid #d7ccc8;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      line-height: 1.6;
+    }
+    .expired {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="message">
+    <p><strong>Cc, tu es là ?</strong></p>
+    <p>Il y a quelque chose que je garde en moi depuis longtemps, et aujourd’hui, j’ai décidé de t’en parler. J’ai longtemps hésité, parce que je me demande : et si ta réponse est non ? Et si tu en parlais à ta maman ? Comment je me sentirais en étant à ses côtés ? Et surtout, comment je me sentirais en te voyant, toi, après t’avoir tout avoué ?</p>
+    <p>Mais malgré toutes ces questions, j’ai pris le temps de réfléchir… et j’ai finalement décidé de me lancer.</p>
+    <p>Depuis un moment, je me demande si tu as quelqu’un dans ta vie.<br>
+    Si oui, et que tu l’aimes sincèrement, que vous êtes vraiment sérieux, alors je garderai mes sentiments pour moi. Ce sera difficile, mais avec l’aide de Dieu et le temps, j’apprendrai à t’oublier.</p>
+    <p>Mais si tu n’es avec personne, alors je veux te dire la vérité : je t’aime. Depuis le tout premier jour où j’ai vu ta photo, mes sentiments n’ont fait que grandir. Depuis la Turquie jusqu’à maintenant, chaque jour a renforcé ce que je ressens pour toi. Et quand je t’ai vue en vrai, mon cœur a su qu’il devait se battre pour toi.</p>
+    <p>Avec tout le respect que je te dois, je veux simplement que tu saches une chose :<br>
+    <strong>je t’aime d’un amour sincère, profond et véritable.</strong></p>
+  </div>
+  <div id="expired" class="expired">
+    <p><strong>Ce message a expiré.</strong></p>
+  </div>
+  <script>
+    // 1 heure après ouverture de la page
+    const EXPIRATION_DELAY = 60 * 60 * 60 * 1000; // 1h en millisecondes
+    setTimeout(() => {
+      document.getElementById('message').style.display = 'none';
+      document.getElementById('expired').style.display = 'block';
+    }, EXPIRATION_DELAY);
+  </script>
+</body>
+</html>
